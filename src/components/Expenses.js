@@ -1,6 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import {Grid} from "@material-ui/core";
 import React from "react";
+import NewExpense from "./NewExpense";
 
 
 const Expenses = () => {
@@ -27,6 +28,7 @@ const Expenses = () => {
     return (
         <>
             <Grid container direction="column" style={{padding: "15px"}}>
+                <NewExpense items={expenses}/>
                 <ExpenseItem title={expenses[0].title}
                              expenseAmount={expenses[0].expenseAmount}
                              date={expenses[0].date}/>

@@ -1,8 +1,8 @@
 import {Button, Grid, Paper} from '@material-ui/core'
 import * as React from 'react'
+import {useState} from 'react'
 import styles from "../styles/expenseStyles"
 import ExpenseDate from "./ExpenseDate";
-import {useState} from "react";
 
 const ExpenseItem = ({title: initialTitle, expenseAmount, date}) => {
 
@@ -12,6 +12,7 @@ const ExpenseItem = ({title: initialTitle, expenseAmount, date}) => {
         setTitle("New title");
     }
 
+
     const classes = styles();
     return (
         <div>
@@ -19,9 +20,8 @@ const ExpenseItem = ({title: initialTitle, expenseAmount, date}) => {
                 <ExpenseDate date={date}/>
                 <Grid item className={classes.title}>{title}</Grid>
                 <Grid item xs={2} className={classes.expenseAmount}>Expense : {expenseAmount}</Grid>
-                <Button size="small" onClick={onClickChangeTitle}  style={{color:"darkred",fontSize:"15px"}}>Change title</Button>
+                <Button size="small" onClick={onClickChangeTitle}  style={{color:"darkred",fontSize:"10px"}}>Change title</Button>
             </Paper>
-
         </div>
     )
 }

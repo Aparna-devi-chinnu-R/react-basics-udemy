@@ -10,7 +10,7 @@ export default makeStyles(() => ({
         padding: "0.5rem",
         margin: "1rem 0",
         borderRadius: "12px",
-        backgroundColor: "#4b4b4b"
+        // backgroundColor: "#4b4b4b"
     },
     expenseAmount: {
         border: "5px solid white",
